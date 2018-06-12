@@ -13,7 +13,7 @@ class Favorites extends Migration
      */
     public function up()
     {
-        Schema::create('user_favorites', function (Blueprint $table) {
+        Schema::create('user_favorite', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned()->index();
             $table->integer('favorites_id')->unsigned()->index();
@@ -35,6 +35,6 @@ class Favorites extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_favorites');
+        Schema::dropIfExists('user_favorite');
     }
 }
